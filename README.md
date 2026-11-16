@@ -1,11 +1,11 @@
 # parkinggaragepy
-_parkinggaragepy_ is a smart system to manage a small parking garage with only three spots.
+_parkinggaragepy2_ is a smart system to manage a small parking garage with only three spots.
 
 The system includes the following sensors and actuators:
-* Three infrared distance sensors, one for each parking spot;
-* A servo motor to open/close the garage door;
-* A Real Time Clock (RTC) to handle time operations;
-* A red smart lightbulb to indicate when the garage is full.
+* Three **KY-032 infrared obstacle detection sensors**, one for each parking spot, to detect whether it is occupied;
+* An **MG90S servo motor** to open/close the garage door;
+* A **DS3231 Real-Time Clock (RTC) module** to handle time operations;
+* A **red LED**, representing a smart lightbulb, to indicate when the garage is full.
 
 The communication between the main board and the other components happens through GPIO pins. The communication is already configured in the BOARD mode (i.e., GPIO pins are referred to by their physical number on the board).
 
