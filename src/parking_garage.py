@@ -44,8 +44,18 @@ class ParkingGarage:
         return count
 
     def calculate_parking_fee(self, entry_time: datetime) -> float:
-        # See User Story #3
-        pass
+        entry_hours = entry_time.hour
+        exit_time = self.rtc.read_datetime()
+        exit_hours = exit_time.hour
+        tot = exit_hours - entry_hours
+
+        exit_minutes = exit_time.minute
+        entry_minutes = entry_time.minute
+
+        if exit_minutes > entry_minutes:
+            tot + 1
+
+        return tot * 2.5
 
     def open_garage_door(self) -> None:
         # See User Story #4

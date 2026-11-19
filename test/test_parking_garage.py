@@ -50,3 +50,23 @@ class TestParkingGarage(TestCase):
         n_spots = parking_garage.get_number_occupied_spots()
         self.assertEqual(2, n_spots)
 
+    @patch.object(SDL_DS3231, "__init__", return_value=None)
+    def test_rtc_configuration(self, mock_rtc: MagicMock):
+        parking_garage = ParkingGarage()
+        mock_rtc.assert_called_once()
+
+    @patch.object(SDL_DS3231, "read_datetime")
+    def test_calculate_parking_fee_full_hours(self, mock_exit_time: MagicMock):
+        mock_exit_time.return_value = datetime(2026, 11, 19, 10, 11)
+        parking_garage = ParkingGarage()
+        entry_time = datetime(2026, 11, 19, 8, 11)
+        fee = parking_garage.calculate_parking_fee(entry_time)
+        self.assertEqual(5, fee)
+
+    @patch.object(SDL_DS3231, "read_datetime")
+    def test_calculate_parking_fee_fraction_of_hours(self, mock_exit_time: MagicMock):
+        mock_exit_time.return_value = datetime(2026, 11, 19, 10, 12)
+        parking_garage = ParkingGarage()
+        entry_time = datetime(2026, 11, 19, 8, 11)
+        fee = parking_garage.calculate_parking_fee(entry_time)
+        self.assertEqual(7.5, fee)
