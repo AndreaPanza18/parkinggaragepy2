@@ -11,14 +11,13 @@ The communication between the main board and the other components happens throug
 
 ## Instructions for You
 * You are asked to develop _parkinggaragepy2_ by following TDD.
-* You DO NOT need to develop a GUI.
-* You CANNOT change the signature of the provided methods, move the provided methods to other classes, or change the name of the provided classes. However, you CAN add fields, methods (e.g., methods used by tests to set up the fixture or methods used by the provided methods), or even classes (including other test classes), as long as you comply with the provided API.
-* You CAN use the internet to consult Python APIs or QA sites (e.g., StackOverflow).
-* You CANNOT use AI tools (e.g., ChatGPT).
+* You CANNOT change the signatures of the provided methods, move the provided methods to other classes, or change the name of the provided classes. However, you CAN add fields, methods (e.g., methods used by tests to set up the fixture or methods used by the provided methods), or even classes (including other test classes), as long as you comply with the provided API.
+* You CAN use the internet to consult Python APIs or QA websites (e.g., StackOverflow).
+* You CAN use AI tools (e.g., ChatGPT).
 * You CANNOT interact with your colleagues. Work alone and do your best!
-* The _parkinggaragepy2_ requirements are divided into a set of USER STORIES, which serve as a to-do list (see the _Issues_ session).
-* You should be able to incrementally develop _parkinggaragepy2_ without an upfront comprehension of all its requirements. DO NOT read ahead, and handle the requirements (i.e., specified in the user stories) one at a time in the provided order. Develop _parkinggaragepy2_ by starting from the first story’s requirement. When a story is IMPLEMENTED, move on to the NEXT one. A story is implemented when you are confident that your program correctly implements the functionality stipulated by the story's requirement. This implies that all your test cases for that story and all the test cases for the previous stories pass. You may need to review your program as you progress toward more advanced requirements.
-* Each time you end a TDD phase, COMMIT.
+* The _parkinggaragepy2_ requirements are divided into a set of USER STORIES, which serve as a to-do list (see the _Issues_ section).
+* You should be able to develop _parkinggaragepy2_ incrementally, without having to understand all the user stories upfront. DO NOT read ahead. Instead, address the user stories one at a time, following the order in which they are provided. Start developing _parkinggaragepy2_ by implementing the requirements of the first user story. Once a story has been IMPLEMENTED, move on to the NEXT one. A story is considered IMPLEMENTED when you are confident that your program correctly satisfies all the requirements specified in that story. This means that all test cases for that story must pass. Naturally, all test cases for previously implemented stories must continue to pass as well. You may need to revise your program as you progress through subsequent user stories.
+* Each time you IMPLEMENT a user story, COMMIT your changes.
 * If you need to handle error situations (including situations unspecified by the user stories), throw a `ParkingGarageError`.
 
 ## API Usage
