@@ -11,7 +11,7 @@ The communication between the main board and the other components happens throug
 
 ## Instructions for You
 * You are asked to develop _parkinggaragepy2_ by following TDD.
-* You CANNOT change the signatures of the provided methods, move the provided methods to other classes, or change the name of the provided classes. However, you CAN add fields, methods (e.g., methods used by tests to set up the fixture or methods used by the provided methods), or even classes (including other test classes), as long as you comply with the provided API.
+* You CANNOT change the signatures of the provided methods, move the provided methods to other classes, or change the name of the provided classes, instance variables, and constants.
 * You CAN use the internet to consult Python APIs or QA websites (e.g., StackOverflow).
 * You CAN use AI tools (e.g., ChatGPT).
 * You CANNOT interact with your colleagues. Work alone and do your best!
