@@ -23,7 +23,7 @@ class ParkingGarage:
         # See User Stories #1, #3-5
         GPIO.setmode(GPIO.BOARD) # Set the numbering schema to bord mode
         GPIO.setwarnings(False)
-        self.rtc = None # Variable not initialize yet (see User Story #3)
+        self.rtc = SDL_DS3231.SDL_DS3231() # Variable not initialize yet (see User Story #3)
         self.servo = None # Variable not initialize yet (see User Story #4)
         self.door_open = None # Variable not initialize yet (see User Story #4)
         self.red_light_on = None # Variable not initialize yet (see User Story #5)
@@ -37,8 +37,11 @@ class ParkingGarage:
         raise ParkingGarageError
 
     def get_number_occupied_spots(self) -> int:
-        # See User Story #2
-        pass
+        count = 0
+        for pin in [self.INFRARED_PIN1, self.INFRARED_PIN2, self.INFRARED_PIN3]:
+            if self.check_occupancy(pin):
+                count += 1
+        return count
 
     def calculate_parking_fee(self, entry_time: datetime) -> float:
         # See User Story #3
